@@ -182,7 +182,7 @@ return [
     'defaults' => [
         'supervisor-1' => [
             'connection' => 'redis',
-            'queue' => ['default', 'lago_api'],
+            'queue' => ['default', 'lago_api', 'notifications'],
             'balance' => 'auto',
             'autoScalingStrategy' => 'time',
             'minProcesses' => 1,
@@ -207,7 +207,7 @@ return [
 
         'local' => [
             'supervisor-1' => [
-                'queue' => ['default', 'lago_api'],
+                'queue' => ['default', 'lago_api', 'notifications'],
                 'maxProcesses' => 3,
                 'processes' => 8,
                 'tries' => 3,
