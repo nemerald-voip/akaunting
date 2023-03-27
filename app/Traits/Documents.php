@@ -12,6 +12,7 @@ use Egulias\EmailValidator\Validation\MultipleValidationWithAnd;
 use Egulias\EmailValidator\Validation\RFCValidation;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
 trait Documents
 {
@@ -149,7 +150,7 @@ trait Documents
 
         $prefix = config('type.document.' . $type . '.setting.prefix');
 
-
+        if (empty($prefix)) $prefix = $type;
         $key .= $prefix . '.' . $setting_key;
 
         return $key;
