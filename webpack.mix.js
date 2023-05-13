@@ -46,7 +46,9 @@ mix
     .js('resources/assets/js/views/common/contacts.js', 'public/js/common/contacts.min.js')
     .js('resources/assets/js/views/common/companies.js', 'public/js/common/companies.min.js')
     .js('resources/assets/js/views/common/dashboards.js', 'public/js/common/dashboards.min.js')
-    .js('resources/assets/js/views/common/documents.js', 'public/js/common/documents.min.js')
+    //.js('resources/assets/js/views/common/documents.js', 'public/js/common/documents.min.js')
+    // Including the customized version
+    .js('modules/CustomFields/Resources/assets/js/app.min.js', 'public/js/common/documents.min.js')
     .js('resources/assets/js/views/common/imports.js', 'public/js/common/imports.min.js')
     .js('resources/assets/js/views/common/items.js', 'public/js/common/items.min.js')
     .js('resources/assets/js/views/common/reports.js', 'public/js/common/reports.min.js')
